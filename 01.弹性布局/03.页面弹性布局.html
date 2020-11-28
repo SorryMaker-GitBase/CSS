@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 需求：左侧边栏是中间内容区域的一半，右侧边栏宽度固定 -->
+    <div id="left">
+        左侧边栏
+    </div>
+    <div id="main">
+        内容区
+    </div>
+    <div id="right">
+        右侧边栏
+    </div>
+</body>
+</html>
+<style>
+    body{
+        display: flex;
+        height: 500px;
+        /*主轴*/
+        flex-direction: row;
+    }
+    /*弹性盒子剩余空间分布 */
+    #left{
+        background: chartreuse;
+        flex:1
+    }
+    #main{
+        background: cornflowerblue;
+        flex: 2;
+    }
+    #right{
+        width: 200px;
+        background: crimson;
+    }
+</style>

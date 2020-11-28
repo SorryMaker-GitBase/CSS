@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹性布局基础属性</title>
+</head>
+<body>
+    <div id="box">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+    </div>
+</body>
+</html>
+<style>
+    #box{
+        display: flex;
+        width: 500px;
+        height: 600px;
+        margin: 50px auto;
+        border: 1px solid #666666;
+        /*
+        主轴方向:行/列 默认从左至右 从上至下,反方向row/colum-reverse 内容超出容器，默认不换行
+        flex-direction:row/colum/row-reverse/colum-reverse
+        */
+        flex-direction: row;
+        /*
+        在主轴的分布情况
+        justify-content:flex-start/center/space-around/space-between/space-evenly(新属性)
+        */
+        justify-content: space-evenly;
+
+        /*
+        副轴对齐方式：
+        align-items:stretch(默认拉伸，在子元素没有高度时，默认将子元素拉升到和父元素相同的高度)/flex-start/center/flex-end
+        */
+        align-items: center;
+    }
+    .child{
+        width: 100px;
+        height: 100px;
+        background: red;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+    }
+</style>
